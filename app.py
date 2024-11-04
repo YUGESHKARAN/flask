@@ -2,7 +2,8 @@ from flask import Flask, jsonify
 import pandas as pd
 from flask_cors import CORS
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, supports_credentials=True)
 
 # Global variable to store the DataFrame
 global_df = None
